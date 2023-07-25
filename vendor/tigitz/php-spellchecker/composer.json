@@ -1,0 +1,69 @@
+{
+    "name": "tigitz/php-spellchecker",
+    "type": "library",
+    "description": "Provides an easy way to spellcheck multiple text source by many spellcheckers, directly from PHP",
+    "keywords": [
+        "spelling",
+        "spellcheck",
+        "spellchecker",
+        "spell-checker",
+        "spell-check",
+        "php-spellchecker"
+    ],
+    "homepage": "https://github.com/tigitz/php-spellchecker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philippe Segatori",
+            "email": "contact@philippe-segatori.fr",
+            "homepage": "https://github.com/tigitz",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 | ^8.0",
+        "nyholm/psr7": "^1.3",
+        "psr/http-client": "^1.0",
+        "symfony/process": "^4.4.30 | ^5.0 |^6.0",
+        "thecodingmachine/safe": "^1.0 | ^2.0",
+        "webmozart/assert": "^1.3"
+    },
+    "require-dev": {
+        "aptoma/twig-markdown": "^3.0",
+        "cocur/slugify": "^3.2 || ^4.0",
+        "erusev/parsedown": "^1.7",
+        "erusev/parsedown-extra": "^0.8",
+        "phpstan/phpstan": "^1.2.0",
+        "phpstan/phpstan-strict-rules": "^1.1.0",
+        "phpstan/phpstan-webmozart-assert": "^1.0.0",
+        "phpstan/phpstan-phpunit": "^1.0.0",
+        "phpunit/phpunit": "^9.5",
+        "pixelrobin/php-feather": "^1.0",
+        "symfony/filesystem": "^4.4 || ^5.0 || ^6.0",
+        "symfony/finder": "^4.4 || ^5.0 || ^6.0",
+        "symfony/http-client": "^5.0 || ^6.0",
+        "thecodingmachine/phpstan-safe-rule": "^1.1"
+    },
+    "suggest": {
+        "symfony/http-client": "A PSR-18 Client implementation to use spellcheckers that relies on HTTP APIs"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpSpellcheck\\": "src"
+        },
+        "files": [ "src/Text/functions.php" ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpSpellcheck\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

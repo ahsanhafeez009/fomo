@@ -1,0 +1,22 @@
+<IfModule mod_dtimeout.c>
+<Files ~ ".php">
+SetEnvIf Request_URI "index.php" DynamicTimeout=300
+</Files>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/public/ 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+
+RewriteRule ^(.*)$ /public/$1 
+#RewriteRule ^ index.php [L]
+RewriteRule ^(/)?$ public/index.php [L] 
+</IfModule>
+AddHandler application/x-httpd-php81 .php .php5 .php4 .php3
